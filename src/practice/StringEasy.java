@@ -2,8 +2,10 @@ package practice;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -29,7 +31,7 @@ class reverseString
 class oddOne
 {
 	public static void main(String[] args) {
-		String s = "0045678";
+		String s = "8009";
 		int ind=-1;
 		for(int i=s.length()-1;i>=0;i--)
 		{
@@ -193,9 +195,28 @@ class NestingDepth
 	}
 }
 
-class Roman
+class Reverse_Particular
 {
 	public static void main(String[] args) {
+		String s = "All is well";
+		String[] s1 = s.split(" "); 
+		int maxLen = 0;
+		int index = -1;
+		for(int  i=0;i<s1.length;i++)
+		{
+			if(s1[i].length()>=maxLen)
+			{
+				maxLen = s1[i].length();
+				index = i;
+			}
+		}
+		
+		String longest = s1[index];
+		String reversed = new StringBuilder(longest).reverse().toString();
+		s1[index]=reversed;
+		
+		String result =String.join(" ", s1);
+		System.out.println(result);
 		
 	}
 }
