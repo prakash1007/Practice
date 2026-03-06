@@ -1,12 +1,15 @@
 package practice;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Queue;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -351,4 +354,25 @@ class Second_largest
 				.orElse(null);
 		System.out.println(secondLargest);
 	}
+}
+
+class helll{
+
+public static List<String> arrange(List<String> list) {
+    Queue<String> males = new LinkedList<>();
+    Queue<String> females = new LinkedList<>();
+
+    for (String s : list) {
+        if (s.equals("M")) males.add(s);
+        else females.add(s);
+    }
+
+    List<String> result = new ArrayList<>();
+
+    while (!males.isEmpty() || !females.isEmpty()) {
+        if (!males.isEmpty()) result.add(males.poll());
+        if (!females.isEmpty()) result.add(females.poll());
+    }
+    return result;
+}
 }

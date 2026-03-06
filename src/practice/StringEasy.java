@@ -220,3 +220,9 @@ class Reverse_Particular
 		
 	}
 }
+class check
+{
+	public static void main(String[] args) {
+		int a,b,c,d=20;
+	}
+}
