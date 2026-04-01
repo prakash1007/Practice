@@ -264,7 +264,6 @@ class Solutions {
 	    		addNode(resNode);
 	    		map.put(key_, resNode);
 	    		return res;
-	    		
 	    	}
 	    	return -1;
 	    }
@@ -317,7 +316,7 @@ class Solutions {
          List<String> output = new ArrayList<>();
 
          output.add("null");                 // LRUCache(2)
-         cache.put(1, 1); output.add("null");
+         cache.put(1, 1); output.add("null");	
          cache.put(2, 2); output.add("null");
          output.add(String.valueOf(cache.get(1)));
          cache.put(3, 3); output.add("null");
@@ -330,5 +329,40 @@ class Solutions {
          System.out.println(output);
      }
  }
+ 
+ class Node {
+	    int key, value, cnt;
+	    Node next;
+	    Node prev;
+	    
+	    Node(int _key, int _value) {
+	        key = _key;
+	        value = _value;
+	        cnt = 1;
+	    }
+	}
+
+ 
+ 
+ 
+  class Test2 {
+	    public static void main(String[] args) {
+	        // LFU Cache
+	       // LFUCache cache = new LFUCache(2);
+	        
+	        // Queries
+//	        cache.put(1, 1);
+//	        cache.put(2, 2);
+//	        System.out.print(cache.get(1) + " ");
+//	        cache.put(3, 3);
+//	        System.out.print(cache.get(2) + " ");
+//	        System.out.print(cache.get(3) + " ");
+//	        cache.put(4, 4);
+//	        System.out.print(cache.get(1) + " ");
+//	        System.out.print(cache.get(3) + " ");
+//	        System.out.print(cache.get(4) + " ");
+	    }
+	}
+ 
  
  
